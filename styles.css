@@ -175,7 +175,8 @@ nav{
 }
 
 .productImg{
-    width: 50%;
+    width: 40%;
+    padding-left: 20px;
 }
 .productDetails{
     position: absolute;
@@ -189,13 +190,14 @@ nav{
     color: gray;
 }
 .productDes{
-    font-size: 24px;
+    font-size: 20px;
     color: gray;
 }
 .colors,
 .sizes{
     display: flex;
     margin-bottom: 20px;  
+    padding-left: 20px;
 }
 .color{
     width: 32px;
@@ -311,7 +313,7 @@ label{
     padding: 50px;
     display: flex;
 }
-.displayItem{
+.galleryItem{
     flex: 1;
     padding: 50px;
 }
@@ -341,7 +343,8 @@ label{
 }
 .nsButton{
     padding: 15px;
-    font-weight: 400;cursor: pointer;
+    font-weight: 400;
+    cursor: pointer;
 }
 
 footer{
@@ -393,9 +396,16 @@ footer{
     font-size: 14px;
 }
 
-@media screen and (min-width:480px) and (max-width:768px){
+@media(max-width: 576px){
+    .logo{
+        width: 90%;
+    }
+    .limitedOffer{
+        width: 90%;
+    }
     nav{
-        padding: 20px;
+        padding: 15px;
+        width: 90%
     }
     .search{
         display: none;
@@ -406,28 +416,30 @@ footer{
     .menuItem{
         margin: 20px;
         font-weight: 200;
-        font-size: 20px;
+        font-size: 1.1rem;
     }
     .slider{
         clip-path: none;
     }
     .sliderBg{
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
     .sliderTitle{
         display: none;
     }
     .sliderImg{
-        width: 90%;
+        width: 80%;
     }
     .sliderPrice{
+        font-size: 2em;
         top: unset;
         bottom: -50;
         left: 0;
         background-color: lightgray;
     }
     .buyButton{
+        font-size: 1.5rem;
         right: 0;
         top: 0;
     }
@@ -439,7 +451,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 180px;
+        padding-bottom: 20px;
     }
     .productDetails{
         width: 100%;
@@ -451,21 +463,54 @@ footer{
         top: 0;
         padding: 0;
     }
-    .productDes{
+    .productPrice{
         font-size: 20px;
+        padding-bottom: 2px;
+    }
+    .productDes{
+        font-size: 15px;
+        width: 80%;
     }
     .productTitle{
-        font-size: 50px;
+        font-size: 40px;
         margin: 0;
     }
     .productImg{
+        width: 50%;
+    }
+
+    .size{
+        font-size: 15px;
+        margin-bottom: 10px;
+        width: 20px;
+        height: 20px;
+    }
+    .payment{
+        display: none;
         width: 80%;
+        height: 100%;
+    }
+    .productButton{
+        width: 50%;
     }
     .gallery{
         display: none;
     }
     .newSeason{
         flex-direction: column;
+    }
+ 
+    .nsImg{
+        width: 70%;
+        height: 70%;
+    }
+    .nsTitle{
+        font-size: 20px;
+    }
+    .nsButton{
+        width: 90%;
+        padding: 5px;
+        font-weight: 200;
     }
     .nsItem:nth-child(2){
         padding: 50px;
@@ -483,4 +528,75 @@ footer{
         padding: 20px;
     }
 
+}
+@media(min-width:600px) and (max-width: 768px){
+    .slider{
+        clip-path: none;
+    }
+    .sliderImg{
+        width: 80%;  
+    }
+    .sliderTitle{
+        font-size: 2.5rem;
+    }
+    .sliderBg{
+        width: 90%;
+        height: 90%;
+    }
+    .buyButton{
+        font-size: 2.3rem;
+        right: 8px;
+    }
+    .product{
+        clip-path: none;
+    }
+    .productTitle{
+        font-size: 3.5rem;
+    }
+    .productPrice{
+        font-size: 2rem;
+    }
+    .productDes{
+        font-size: 1.5rem;
+        width: 90%;
+    }
+    .color{
+        width: 40px;
+        height: 40px;
+    }
+    .size{
+        font-size: 2rem;
+    }
+    .gallery{
+        flex-direction: column;
+    }
+    .galleryTitle{
+        font-size: 2rem;
+    }
+    .galleryImg{
+        width: 100%;
+        height: 100%;
+    }
+    .fMenuTitle{
+        font-size: 1.5rem;
+    }
+    .fListItem{
+        font-size: 20px;
+    }
+    .fInput{
+        padding: 15px;
+        margin-bottom: 4px;
+    }
+    .fButton{
+        padding: 10px;
+        width: 50%;
+    }
+    .fIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .copyright{
+        font-size: 1rem;
+        text-align: center;
+    }
 }
